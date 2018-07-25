@@ -63,10 +63,14 @@ THE SOFTWARE.
   </scm>
 
   <distributionManagement>
-    <site>
-      <id>github-pages</id>
-      <url>gitsite:git@github.com/jenkinsci/maven-site.git:core</url>
-    </site>
+    <snapshotRepository>
+      <id>nexus-snapshots</id>
+      <url>http://nexus/repository/maven-snapshots/</url>
+    </snapshotRepository>
+    <repository>
+      <id>nexus-releases</id>
+      <url>http://nexus/repository/maven-releases/</url>
+    </repository>
   </distributionManagement>
 
   <issueManagement>
@@ -121,9 +125,8 @@ THE SOFTWARE.
        *not* defined the specific details in the settings.xml file. -->
   <repositories>
     <repository>
-      <id>repo.jenkins-ci.org</id>
-      <url>http://repo.jenkins-ci.org/public/</url>
-      <!-- allow snapshots -->
+      <id>maven-group</id>
+      <url>http://nexus/repository/maven-group/</url>
     </repository>
   </repositories>
 
